@@ -1,0 +1,213 @@
+// include all of Bootstrap
+@import 'bootstrap/scss/bootstrap';
+@import "../../../assets/styles/colors.scss";
+@import "../../../assets/styles/sidebar.scss";
+
+
+body {
+
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-size: 0.95rem;
+  font-family: 'Fira Sans', sans-serif;
+  overflow: hidden;
+}
+
+.SG360CSlayoutContainer {
+  position: relative;
+  .inner-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 85px);
+  }
+  .innerForm {
+    background: transparent;
+    .layout-card-container {
+      border: 0;
+      padding: 0;
+    }
+    .card {
+      border: 0;
+      padding:10px;
+    }
+  }
+}
+
+
+
+.content-wrapper {
+  background: #f9f9f9;
+  min-height: calc(100vh - 126px);
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-top-left-radius: 25px;
+
+  .btn-disabled {
+    cursor: not-allowed;
+    pointer-events: none !important;
+
+  }
+}
+
+.contentContainer {
+  border: 1px solid #fafafa;
+  position: relative;
+  background: #ffff;
+  border-radius: 8px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  box-shadow: #eee 0px 8px 24px;
+}
+
+.navbar-light {
+  box-shadow: none;
+  background: none;
+  padding: 0;
+  z-index: 890;
+
+  h5 {
+    opacity: 0.8;
+  }
+
+  h3 {
+    color: #335EEE !important;
+  }
+
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #007bff !important;
+}
+
+.sideHLogo {
+  width: auto;
+  height: 70px;
+  top: 12px;
+  position: absolute;
+  left: 15px;
+}
+
+.headerLogo {
+  height: 80px;
+  padding-top: 0;
+  padding-left: 30px;
+  padding-top: 10px;
+  background: #ffff;
+  margin-top: 0px;
+  width: calc(100% - 285px);
+}
+
+.footer {
+  background: #214288;
+  border-top: 1px solid #ddd;
+  height: 65px;
+  text-align: center;
+  font-size: 13.33px;
+  padding-top: 20px;
+
+  .footerText {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffff;
+  }
+}
+
+
+/* pill box overrides */
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #000 !important;
+  cursor: pointer;
+}
+
+.logoutIcon {
+  box-shadow: 0px 100px 80px 0px RGB(41 72 152/5%) !important;
+    cursor: pointer;
+    padding: 10px;
+    color: #6c757d;
+    background: #ffff;
+    height: 50px;
+    border: 1px solid #6c757d;
+    width: 50px;
+
+    border-radius: 10px;
+}
+
+//glow effect on hover of logout icon
+
+.logoutIcon:hover {
+  box-shadow: 0px 100px 80px 0px RGB(41 72 152/5%) !important;
+  cursor: pointer;
+  color: #ffff;
+  background: #214288;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #6c757d, 0 0 20px #6c757d, 0 0 30px #6c757d, 0 0 40px #6c757d,
+      0 0 50px #6c757d, 0 0 60px #6c757d, 0 0 70px #6c757d;
+  }
+  100% {
+    box-shadow: 0 0 20px #6c757d, 0 0 30px #6c757d, 0 0 40px #6c757d, 0 0 50px #6c757d,
+      0 0 60px #6c757d, 0 0 70px #6c757d, 0 0 80px #6c757d;
+  }
+}
+
+.nav-pills .nav-link {
+  cursor: pointer;
+  color: #000 !important;
+
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background: none !important;
+}
+
+
+
+/* pill box ends */
+
+
+@include media-breakpoint-up(sm) { 
+
+  .col-form-label {
+   white-space: initial;
+   width: auto;
+}
+.form-content {
+   padding: 0 ;
+}
+}
+@include media-breakpoint-up(md) {
+ .form-content {
+   padding: 10px 10px 10px 10px;
+ }
+ .col-form-label {
+   white-space: nowrap;
+   width: auto;
+ }
+}
+@include media-breakpoint-up(lg) {
+ .form-content {
+   padding: 10px 10px 10px 10px;
+ }
+}
+@include media-breakpoint-up(xl) { 
+ .form-content {
+   padding: 10px 10px 10px 10px;
+ }
+
+}
+@include media-breakpoint-up(xxl) {
+
+ .form-content {
+   padding: 10px 10px 10px 10px;
+ }
+ 
+
+}

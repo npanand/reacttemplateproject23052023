@@ -1,0 +1,177 @@
+// .auth-wrapper {
+//     display: block;
+//     height: 100vh;
+//     background: #ffff;
+//     text-align: left;
+//     padding-top: 65px;
+//     padding-bottom: 65px;
+
+//     .logoContainer {
+//         margin-left: 118px;
+//         margin-bottom: 30px;
+//     }
+
+//     .btn {
+//         background-color: #ffff !important;
+//         color: #000 !important;
+//     }
+
+//     .logo {
+//         background: linear-gradient(324.93deg, #0F70DA 0.74%, #007AFF 100%);
+//         margin: 0 auto 0;
+//         display: block;
+//         width: 600px;
+//         height: 600px;
+//     }
+
+//     input {
+//         line-height: 2;
+//     }
+
+//     @mixin loginHeaderMixin {
+//         line-height: 32px !important;
+//         text-align: left;
+//     }
+
+//     .auth-content {
+
+
+//         h3 {
+//             @include loginHeaderMixin;
+//             color: #ffff !important;
+//             text-align: center !important;
+//             font-size: 24px !important;
+
+//         }
+
+//         h4 {
+//             @include loginHeaderMixin;
+//             color: #ffff !important;
+//             text-align: center !important;
+//             font-size: 22px !important;
+//         }
+
+//     }
+
+
+//     h4 {
+//         @include loginHeaderMixin;
+//         font-size: 28px;
+//     }
+
+//     h5 {
+//         @include loginHeaderMixin;
+//         font-size: 14px;
+
+//     }
+// }
+
+// .auth-inner {
+//     position: relative;
+//     align-self: flex-end;
+
+//     clear: both;
+
+//     height: auto;
+//     overflow: auto;
+//     transition: all .3s;
+//     color: #ffff;
+
+//     input {
+//         background: transparent;
+//         border: 1px solid #ffff;
+//     }
+
+//     .formContainer {
+//         background: #0d6efd;
+//         border-radius: 10px;
+//         padding: 35px;
+//         padding: 70px 65px 90px 65px;
+//     }
+
+//     h3 {
+//         color: #ffff !important;
+//     }
+// }
+
+// .auth-wrapper .form-control:focus {
+//     box-shadow: none;
+// }
+
+
+
+// .btn-login {
+//     background-color: #007AFF;
+//     color: #ffff;
+//     width: 100%;
+// }
+
+// .fill-height {
+//     min-height: 100%;
+//     /* cross-browser */
+//     height: 100%;
+//     /* cross-browser */
+// }
+
+// .forgot-password,
+// .forgot-password a {
+//     text-align: left;
+
+//     padding-top: 10px;
+// }
+
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//     .auth-wrapper .logo {
+//         width: 200px;
+//         height: 200px;
+//     }
+// }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//     .auth-wrapper .logo {
+//         width: 200px;
+//         height: 200px;
+//     }
+// }
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//     .auth-wrapper .logo {
+//         width: 400px;
+//         height: 400px;
+//     }
+// }
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//     .auth-wrapper .logo {
+//         width: 400px;
+//         height: 400px;
+//     }
+// }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {
+//     .auth-wrapper .logo {
+//         width: 400px;
+//         height: 400px;
+//     }
+// }
+
+// @media only screen and (min-width: 1920px) {
+//     .auth-wrapper .logo {
+//         width: 600px;
+//         height: 600px;
+//     }
+// }
+
+// .captcha-container {
+//     box-sizing: border-box;
+//     display: block;
+//     padding: 20px;
+//     float: pull-right;
+//     border: 1px solid #0378d5
+// }

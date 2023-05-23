@@ -1,0 +1,240 @@
+@mixin vendorPrefix(
+  $cssproperty,
+  $value,
+  $vendorprefixes: ("webkit", "moz", "ms", "o", "")
+) {
+  @each $prefix in $vendorprefixes {
+    #{'-' + $prefix + '-' + $cssproperty}: $value;
+  }
+
+  #{$cssproperty}: $value;
+}
+
+  @mixin formControls{
+    .checkBoxContainer {
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+        color: $textColorAN !important;
+        @include vendorPrefix(user-select, none);
+        font-size: 14px;
+        letter-spacing: 0;
+        @extend .myGlobalFont;
+        margin: 0;
+        padding-top: 4px;
+    
+        input[type=checkbox] {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+    
+          &:checked ~ .checkBoxStyle {
+            background-color: $checkboxRadioColor;
+            border: 1px solid $checkboxRadioColor;
+          }
+        }
+    
+        .checkBoxStyle {
+          position: absolute;
+          top: 6px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background-color: $white;
+          border-radius: 2px;
+          border: 1px solid $blueLinkBtnAN;
+    
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+    
+          &:after {
+            display: block;
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            @include vendorPrefix(transform, rotate(45deg));
+          }
+        }
+      }
+    
+      input[type=checkbox] {
+        &:hover, &:focus, &:active {
+          + .checkBoxStyle {
+            @extend .boxBlueShadow;
+          }
+        }
+      }
+    
+      input[type=radio] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    
+        &:checked + .radioBtnStyle:before {
+          border: 5px solid $checkboxRadioColor;
+          position: absolute;
+          border-radius: 50%;
+        }
+    
+        &:hover, &:focus, &:active {
+          + .radioBtnStyle:before {
+            @extend .boxBlueShadow;
+          }
+        }
+      }
+    
+      .radioBtnStyle {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        vertical-align: middle;
+        color: $textColorAN !important;
+        font-size: 14px;
+        letter-spacing: 0;
+        @extend .myGlobalFont;
+        margin: 10px 0 4px;
+        @include vendorPrefix(user-select, none);
+    
+        span {
+          display: block;
+          padding-left: 25px;
+        }
+    
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          background-color: $white;
+          border-radius: 10px;
+          border: $borderWidth $borderStyle $checkboxRadioColor;
+        }
+      }
+    
+      input[type="radio"][disabled] + .radioBtnStyle, input[type=checkbox][disabled] + .checkBoxStyle {
+        opacity: 0.25;
+        cursor: not-allowed;
+      }
+    
+      .disabledControl {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    
+    
+      select, .selection {
+        padding: 3px 25px 3px 6px !important;
+        text-indent: 2px;
+        background: url(./assets/images/DD_Arrow_Right.svg) no-repeat right 4px center transparent !important;
+        @include vendorPrefix(appearance, none);
+    
+        &:hover {
+          background: url(./assets/images/DD_Arrow_Right_Hover.svg) no-repeat right 9px center transparent !important;
+        }
+    
+        &:focus, &:active {
+          background: url(./assets/images/DD_Arrow_Down.svg) no-repeat right 4px center transparent !important;
+    
+          &:hover {
+            background: url(./assets/images/DD_Arrow_Down_Hover.svg) no-repeat right 4px center transparent !important;
+          }
+        }
+    
+        &[disabled] {
+          @extend .disabledBox;
+          background: url(./assets/images/DD_Arrow_Right_Disabled.svg) no-repeat right 4px center $disableControlBGAN !important;
+        }
+      }
+    
+      .inputBlockForError {
+        min-height: 43px;
+        position: relative;
+      }
+    
+      .required {
+        color: $red;
+        padding-left: 2px;
+      }
+    
+      .inputControl, select, .selection, .rc-time-picker-input {
+        height: 30px !important;
+        color: $inputDropdownTextColorAN !important;
+        outline: 0 !important;
+        border: 1px solid $borderColorAN !important;
+        @include vendorPrefix(box-shadow, none);
+        border-radius: 2px !important;
+        font-size: 14px;
+        clear: both;
+        width: 100%;
+        max-width: 75%;
+        display: block;
+    
+        &:focus, &:active {
+          border: 1px solid $blueLinkBtnAN !important;
+        }
+    
+        &.invalid-error-control {
+          border: 1px solid $errorRedColor !important;
+        }
+    
+        + .invalid-error {
+          color: $errorRedColor !important;
+          position: absolute;
+        }
+      }
+    
+      .inputControl, .rc-time-picker-input {
+        padding: 3px 6px !important;
+    
+        &#advanceInputBox {
+          padding: 3px !important;
+        }
+    
+        &.disabledControl {
+          @extend .disabledBox;
+        }
+      }
+    
+  
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(top, #bfbcbcf5 0%, #bfbcbcf5 50%, #bfbcbcf5 51%, #bfbcbcf5 100%);
+}
+
+
+@media screen and (min-width:1920px) {
+  ::-webkit-scrollbar
+{
+	width: 20px;
+}  
+}
+
+
+

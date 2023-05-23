@@ -1,0 +1,94 @@
+//sidebar overrides
+
+.pro-sidebar>.pro-sidebar-inner>.pro-sidebar-layout .pro-sidebar-header {
+  height: 100px;
+  padding-top: 10px;
+  border-bottom: none!important;
+}
+  
+.pro-sidebar .pro-menu>ul>.pro-sub-menu>.pro-inner-list-item {
+  background-color: #f9f9f8 !important;
+}
+
+.pro-sidebar .pro-menu .pro-menu-item.pro-sub-menu .pro-inner-list-item .pro-inner-item:before {
+  visibility: hidden !important;
+}
+
+
+.pro-sidebar-footer {
+  color: #0a0808 !important;
+  border-top:none!important;
+}
+
+.pro-sidebar-header .btn {
+  color: #45434E !important;
+}
+.pro-sidebar .pro-menu .pro-menu-item{
+  font-size: 15px!important;
+  font-weight: 600;
+  margin: 10px 20px 0;   
+}
+
+.pro-sidebar .pro-menu .pro-menu-item.active {
+  //create css arrow border
+  // border-left: 4px solid $blue !important;
+
+  color: #fff !important;
+  background-color: #414141!important;
+  border-radius: 18px;
+  .menuIcons {
+    color: #fff !important;
+  }
+  &:hover{
+    color: #fff !important;
+  }
+
+  box-sizing: border-box;
+}
+
+.pro-sidebar .pro-menu .pro-menu-item:hover{
+  color:#414141;
+}
+
+$sidebar-bg-color: $white  !default;
+$sidebar-color: #414141  !default;
+
+//sidebar overrides ends
+.pro-sidebar {
+  color: #414141 !important;
+}
+
+/* sidebar container */
+.sidebarContainer {
+  height: 100vh;
+  transition: width, left, right, .3s;
+  position: fixed;
+  z-index: 1030;
+}
+
+.sidebarMenu {
+  .menuIcons {
+    color: #414141;
+    font-size: 20px;
+  }
+
+  
+
+  .menuDivider {
+    padding-left: 0px;
+    font-size: 34px;
+    color: #bdbdbd;
+    font-weight: bold;
+  }
+}
+.pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover{
+  color:#414141;
+}
+.pro-sidebar .pro-menu .pro-menu-item.active{
+  .pro-inner-item:hover{
+    color:#fff!important;
+  }
+}
+
+/*sidebar overrides import */
+@import '~react-pro-sidebar/dist/scss/styles.scss';
