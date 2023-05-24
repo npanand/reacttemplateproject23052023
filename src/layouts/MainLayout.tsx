@@ -5,6 +5,9 @@ import { PrivateRoute } from  "../components/routes/protectedRoute";
 import { FaBars } from 'react-icons/fa';
 import white from '../../src/assets/images/pc.jpg'
 
+
+
+
 /*------Lazy loading import method------*/
 const Header = lazy(() => import("../components/shared/header.component")); 
 const Sidebar = lazy(() => import("../components/shared/sideBar.component"));
